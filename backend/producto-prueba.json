@@ -1,0 +1,12 @@
+﻿{
+  "codigo": "LOM-003",
+  "nombre": "Laptop Lenovo ThinkPad",
+  "descripcion": "Laptop empresarial para trabajo y estudio",
+  "precio": 5500,
+  "categoria_id": 1,
+  "attributes": {
+    "RAM": "16GB",
+    "almacenamiento": "512GB SSD",
+    "conexion": "USB-C"
+  }
+}

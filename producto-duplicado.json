@@ -1,0 +1,11 @@
+{
+  "codigo": "LOM-002",
+  "nombre": "Monitor LG 24 DUPLICADO",
+  "descripcion": "Prueba de codigo duplicado",
+  "precio": 1300,
+  "categoria_id": 2,
+  "attributes": {
+    "tamano": "24 pulgadas",
+    "resolucion": "1920x1080"
+  }
+}

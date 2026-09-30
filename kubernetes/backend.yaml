@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lomax-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lomax-backend
+  template:
+    metadata:
+      labels:
+        app: lomax-backend
+    spec:
+      containers:
+        - name: lomax-backend
+          image: 172.19.0.7:5000/lomax-backend:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"
+            - name: DB_HOST
+              value: "172.19.0.2"
+            - name: DB_PORT
+              value: "7001"
+            - name: DB_USER
+              value: "admin"
+            - name: DB_PASSWORD
+              value: "Lomax12345!"
+            - name: DB_NAME
+              value: "lomax"
+            - name: AWS_ENDPOINT_URL
+              value: "http://172.19.0.2:4566"
+            - name: AWS_REGION
+              value: "us-east-1"
+            - name: AWS_ACCESS_KEY_ID
+              value: "test"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "test"
+            - name: DYNAMODB_TABLE
+              value: "ProductoAtributos"
+            - name: ORIGINAL_BUCKET
+              value: "lomax-originales"
+            - name: THUMBNAIL_BUCKET
+              value: "lomax-miniaturas"
+            - name: LAMBDA_FUNCTION
+              value: "lomax-thumbnail"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lomax-backend
+spec:
+  selector:
+    app: lomax-backend
+  ports:
+    - port: 3000
+      targetPort: 3000
+  type: ClusterIP

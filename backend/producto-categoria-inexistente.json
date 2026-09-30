@@ -1,0 +1,11 @@
+{
+  "codigo": "LOM-004",
+  "nombre": "Mouse de prueba",
+  "descripcion": "Producto para probar categoria inexistente",
+  "precio": 250,
+  "categoria_id": 999,
+  "attributes": {
+    "conexion": "USB",
+    "tipo": "Optico"
+  }
+}

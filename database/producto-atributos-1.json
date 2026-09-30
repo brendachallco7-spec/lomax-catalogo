@@ -1,0 +1,27 @@
+{
+  "producto_id": {
+    "N": "1"
+  },
+  "atributos": {
+    "M": {
+      "conexion": {
+        "S": "USB-C"
+      },
+      "ram": {
+        "S": "16GB"
+      },
+      "almacenamiento": {
+        "S": "512GB SSD"
+      }
+    }
+  },
+  "imagen_original_key": {
+    "S": ""
+  },
+  "miniatura_key": {
+    "S": ""
+  },
+  "estado_procesamiento": {
+    "S": "PENDIENTE"
+  }
+}

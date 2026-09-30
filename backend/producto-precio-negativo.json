@@ -1,0 +1,11 @@
+{
+  "codigo": "LOM-003",
+  "nombre": "Teclado de prueba",
+  "descripcion": "Producto para probar precio negativo",
+  "precio": -500,
+  "categoria_id": 3,
+  "attributes": {
+    "conexion": "USB",
+    "tipo": "Mecanico"
+  }
+}

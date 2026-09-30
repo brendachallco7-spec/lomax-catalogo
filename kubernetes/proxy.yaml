@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lomax-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lomax-proxy
+  template:
+    metadata:
+      labels:
+        app: lomax-proxy
+    spec:
+      containers:
+        - name: lomax-proxy
+          image: 172.19.0.7:5000/lomax-proxy:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lomax-proxy
+spec:
+  selector:
+    app: lomax-proxy
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

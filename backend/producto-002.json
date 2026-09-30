@@ -1,0 +1,11 @@
+﻿{
+    "descripcion":  "Monitor Full HD para computadora",
+    "nombre":  "Monitor LG 24",
+    "categoria_id":  2,
+    "attributes":  {
+                       "resolucion":  "1920x1080",
+                       "tamano":  "24 pulgadas"
+                   },
+    "precio":  1200,
+    "codigo":  "LOM-002"
+}
